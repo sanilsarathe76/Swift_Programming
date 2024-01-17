@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Custom_TabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EkY-fH-FOs">
+                                <rect key="frame" x="10" y="69" width="373" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roomie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9e1-mf-oXT">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="50"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                        <color key="textColor" red="0.031372549019607843" green="0.23921568627450979" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sanil" translatesAutoresizingMaskIntoConstraints="NO" id="HOw-KK-ydq">
+                                        <rect key="frame" x="323" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="6fa-JT-gdd"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GXI-oK-a1e"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PSb-SY-Elk">
+                                <rect key="frame" x="0.0" y="139" width="393" height="659"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xTQ-Gc-djj">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rfg-U8-u2C">
+                                        <rect key="frame" x="15" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ize-0x-hNH">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeL-ai-Ssi">
+                                <rect key="frame" x="0.0" y="139" width="50" height="659"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="O4j-rm-9c0"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="onClickLeft:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XAN-1w-9oZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urb-dN-bYv">
+                                <rect key="frame" x="343" y="139" width="50" height="659"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ycD-9p-hUN"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="onClickRight:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dOw-jx-KCk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.83529411764705885" green="0.83529411764705885" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Urb-dN-bYv" firstAttribute="trailing" secondItem="PSb-SY-Elk" secondAttribute="trailing" id="3HH-Pp-Yze"/>
+                            <constraint firstItem="eeL-ai-Ssi" firstAttribute="top" secondItem="PSb-SY-Elk" secondAttribute="top" id="3rv-He-2Tr"/>
+                            <constraint firstItem="eeL-ai-Ssi" firstAttribute="bottom" secondItem="PSb-SY-Elk" secondAttribute="bottom" id="BOB-jE-LtD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PSb-SY-Elk" secondAttribute="bottom" constant="20" id="FkK-yN-lMV"/>
+                            <constraint firstItem="PSb-SY-Elk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Fvu-dP-Xtg"/>
+                            <constraint firstItem="EkY-fH-FOs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="GfR-TK-lJh"/>
+                            <constraint firstItem="eeL-ai-Ssi" firstAttribute="leading" secondItem="PSb-SY-Elk" secondAttribute="leading" id="M3V-bQ-vzG"/>
+                            <constraint firstItem="Urb-dN-bYv" firstAttribute="top" secondItem="PSb-SY-Elk" secondAttribute="top" id="X9S-Kd-D0W"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EkY-fH-FOs" secondAttribute="trailing" constant="10" id="YiI-Yd-atw"/>
+                            <constraint firstItem="EkY-fH-FOs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="hgz-jr-2xG"/>
+                            <constraint firstItem="Urb-dN-bYv" firstAttribute="bottom" secondItem="PSb-SY-Elk" secondAttribute="bottom" id="i5a-ZS-mZb"/>
+                            <constraint firstItem="PSb-SY-Elk" firstAttribute="top" secondItem="EkY-fH-FOs" secondAttribute="bottom" constant="20" id="mTr-XV-NcI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PSb-SY-Elk" secondAttribute="trailing" id="pzc-WE-y9H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="PSb-SY-Elk" id="w9I-9x-zmd"/>
+                        <outlet property="topImage" destination="HOw-KK-ydq" id="uor-lG-9Uz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.58015267175573" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Sanil" width="604.66668701171875" height="556.33331298828125"/>
+    </resources>
+</document>

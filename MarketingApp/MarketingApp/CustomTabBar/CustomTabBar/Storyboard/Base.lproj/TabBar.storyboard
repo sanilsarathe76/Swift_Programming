@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TabBarViewController" customModule="Custom_TabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHk-7S-CBa">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="762"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzx-kt-5kn">
+                                <rect key="frame" x="0.0" y="762" width="393" height="90"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9sY-V5-b1h">
+                                        <rect key="frame" x="10" y="10" width="373" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="H3u-Zd-q0i">
+                                            <size key="itemSize" width="128" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dos-lB-6Dz">
+                                                <rect key="frame" x="0.0" y="5" width="128" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="56D-Wz-HLE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="8YO-aa-QiV"/>
+                                    <constraint firstAttribute="bottom" secondItem="9sY-V5-b1h" secondAttribute="bottom" constant="20" id="JD3-AH-GC4"/>
+                                    <constraint firstItem="9sY-V5-b1h" firstAttribute="top" secondItem="Lzx-kt-5kn" secondAttribute="top" constant="10" id="Tdb-am-CuD"/>
+                                    <constraint firstAttribute="trailing" secondItem="9sY-V5-b1h" secondAttribute="trailing" constant="10" id="ZIj-PI-DgC"/>
+                                    <constraint firstItem="9sY-V5-b1h" firstAttribute="leading" secondItem="Lzx-kt-5kn" secondAttribute="leading" constant="10" id="pLx-d7-CRj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="NHk-7S-CBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3jd-sA-uDN"/>
+                            <constraint firstItem="Lzx-kt-5kn" firstAttribute="top" secondItem="NHk-7S-CBa" secondAttribute="bottom" id="BXg-M8-Ayi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NHk-7S-CBa" secondAttribute="trailing" id="MmR-db-QgF"/>
+                            <constraint firstItem="Lzx-kt-5kn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b21-OP-hWm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lzx-kt-5kn" secondAttribute="trailing" id="ffP-3O-PrV"/>
+                            <constraint firstAttribute="bottom" secondItem="Lzx-kt-5kn" secondAttribute="bottom" id="i3X-lZ-C7N"/>
+                            <constraint firstItem="NHk-7S-CBa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vc0-1o-Dwa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="9sY-V5-b1h" id="GqI-Gm-hVB"/>
+                        <outlet property="containerView" destination="NHk-7S-CBa" id="KuK-LZ-Wbc"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="6gk-19-WFq"/>
+                        <outlet property="tabBarContainerView" destination="Lzx-kt-5kn" id="9b6-BH-YhW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110.68702290076335" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AppBackground">
+            <color white="0.84703565477491261" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+    </resources>
+</document>
